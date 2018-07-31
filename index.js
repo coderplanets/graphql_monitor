@@ -11,11 +11,11 @@ const launcher = new ApolloEngineLauncher({
         /* url: 'http://localhost:4001/graphiql',*/
         url: process.env.APOLLO_ORIGIN,
         overrideRequestHeaders: {
-          /* Host: 'api.coderplanets.com',*/
+          /* Host: 'devapi.coderplanets.com', */
           /* Host: 'coderplanets.com',*/
           /* Host: 'coderplanets.com',*/
           /* 'content-type': 'application/json',*/
-          Origin: '*',
+          /* Origin: 'http://localhost:3000',*/
           /* special: 'Special header value',*/
           /* authorization: 'Bearer autk',*/
         },
