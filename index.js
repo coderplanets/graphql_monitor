@@ -11,6 +11,7 @@ const launcher = new ApolloEngineLauncher({
         /* url: 'http://localhost:4001/graphiql',*/
         url: process.env.APOLLO_ORIGIN,
         overrideRequestHeaders: {
+          /* 'Access-Control-Allow-Origin': '*', */
           /* Host: 'devapi.coderplanets.com', */
           /* Host: 'coderplanets.com',*/
           /* Host: 'coderplanets.com',*/
@@ -42,9 +43,9 @@ const launcher = new ApolloEngineLauncher({
       /* host: process.env.APOLLO_FRONT_HOST, */
       port: parseInt(process.env.APOLLO_FRONT_PORT.slice(1, -1)),
       endpoints: ['/graphiql'],
-      /* overrideGraphqlResponseHeaders: { */
-      /* 'Access-Control-Allow-Origin': '*', */
-      /* }, */
+      overrideGraphqlResponseHeaders: {
+        'Access-Control-Allow-Origin': '*',
+      },
     },
   ],
 })
