@@ -12,6 +12,8 @@ const launcher = new ApolloEngineLauncher({
         url: process.env.APOLLO_ORIGIN,
         overrideRequestHeaders: {
           host: 'devapiraw.coderplanets.com',
+          origin: '*',
+          'Access-Control-Allow-Origin': '*',
           /* Host: 'devapi.coderplanets.com', */
           /* Host: 'coderplanets.com', */
           /* Host: 'coderplanets.com',*/
