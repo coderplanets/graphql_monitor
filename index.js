@@ -11,8 +11,9 @@ const launcher = new ApolloEngineLauncher({
         /* url: 'http://localhost:4001/graphiql',*/
         url: process.env.APOLLO_ORIGIN,
         overrideRequestHeaders: {
+          host: 'devapiraw.coderplanets.com',
           /* Host: 'devapi.coderplanets.com', */
-          /* Host: 'coderplanets.com',*/
+          /* Host: 'coderplanets.com', */
           /* Host: 'coderplanets.com',*/
           /* 'content-type': 'application/json',*/
           /* Origin: 'http://localhost:3000',*/
