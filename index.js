@@ -12,8 +12,8 @@ const launcher = new ApolloEngineLauncher({
         url: process.env.APOLLO_ORIGIN,
         overrideRequestHeaders: {
           host: 'http://devapiraw.coderplanets.com/graphiql',
-          origin: '*',
-          'Access-Control-Allow-Origin': '*',
+          /* origin: '*', */
+          /* 'Access-Control-Allow-Origin': '*', */
           /* Host: 'devapi.coderplanets.com', */
           /* Host: 'coderplanets.com', */
           /* Host: 'coderplanets.com',*/
@@ -27,7 +27,8 @@ const launcher = new ApolloEngineLauncher({
   ],
   logging: {
     /* level: 'INFO',*/
-    level: 'ERROR',
+    /* level: 'ERROR', */
+    level: 'DEBUG',
     /* level: 'INFO', */
     /* level: 'WARN', */
     /*
