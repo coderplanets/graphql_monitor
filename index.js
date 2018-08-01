@@ -27,9 +27,9 @@ const launcher = new ApolloEngineLauncher({
     },
   ],
   logging: {
-    /* level: 'INFO',*/
+    level: 'INFO',
     /* level: 'ERROR', */
-    level: 'DEBUG',
+    /* level: 'DEBUG', */
     /* level: 'INFO', */
     /* level: 'WARN', */
     /*
