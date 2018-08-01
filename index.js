@@ -22,6 +22,8 @@ const launcher = new ApolloEngineLauncher({
           'content-type': 'application/json;charset=utf-8',
           /* Origin: 'http://localhost:3000',*/
           special: 'Special header value',
+          hello: 'world',
+          Hello: 'world 2',
           /* authorization: 'Bearer autk',*/
         },
       },
@@ -50,10 +52,10 @@ const launcher = new ApolloEngineLauncher({
       /* host: 'devapiraw.coderplanets.com', */
       port: 7000, //parseInt(process.env.APOLLO_FRONT_PORT),
       endpoints: ['/graphiql'],
-      overrideGraphqlResponseHeaders: {
-        'Access-Control-Allow-Origin': '*',
-        special: 'Special header value',
-      },
+      /* overrideGraphqlResponseHeaders: { */
+      /* 'Access-Control-Allow-Origin': '*', */
+      /* special: 'Special header value', */
+      /* }, */
     },
   ],
 })
