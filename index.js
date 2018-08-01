@@ -15,11 +15,11 @@ const launcher = new ApolloEngineLauncher({
         overrideRequestHeaders: {
           /* host: 'http://devapiraw.coderplanets.com/graphiql', */
           /* origin: '*', */
-          'Access-Control-Allow-Origin': '*',
-          /* Host: 'devapi.coderplanets.com', */
+          'access-control-allow-origin': '*',
+          Host: 'dev.coderplanets.com',
           /* Host: 'coderplanets.com', */
           /* Host: 'coderplanets.com',*/
-          /* 'content-type': 'application/json',*/
+          'content-type': 'application/json;charset=utf-8',
           /* Origin: 'http://localhost:3000',*/
           special: 'Special header value',
           /* authorization: 'Bearer autk',*/
