@@ -45,10 +45,10 @@ const launcher = new ApolloEngineLauncher({
       /* host: process.env.APOLLO_FRONT_HOST, */
       /* port: parseInt(process.env.APOLLO_FRONT_PORT.slice(1, -1)), */
       port: parseInt(process.env.APOLLO_FRONT_PORT),
-      /* endpoints: ['/graphiql'], */
-      /* overrideGraphqlResponseHeaders: { */
-      /* 'Access-Control-Allow-Origin': '*', */
-      /* }, */
+      endpoints: ['/graphiql'],
+      overrideGraphqlResponseHeaders: {
+        'Access-Control-Allow-Origin': '*',
+      },
     },
   ],
 })
