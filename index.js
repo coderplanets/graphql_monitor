@@ -11,7 +11,7 @@ const launcher = new ApolloEngineLauncher({
         /* url: 'http://localhost:4001/graphiql', */
         url: 'http://localhost:7001/graphiql',
         /* url: process.env.APOLLO_ORIGIN, */
-        url: 'http://devapiraw.coderplanets.com/graphiql',
+        /* url: 'http://devapiraw.coderplanets.com/graphiql', */
         overrideRequestHeaders: {
           /* host: 'http://devapiraw.coderplanets.com/graphiql', */
           /* origin: '*', */
@@ -33,14 +33,12 @@ const launcher = new ApolloEngineLauncher({
     /* level: 'DEBUG', */
     /* level: 'INFO', */
     /* level: 'WARN', */
-    /*
-       request: {
-       destination: 'STDOUT',
-       },
-       query: {
-       destination: 'STDOUT',
-       },
-     */
+    request: {
+      destination: 'STDOUT',
+    },
+    query: {
+      destination: 'STDOUT',
+    },
   },
   frontends: [
     {
