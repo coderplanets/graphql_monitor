@@ -43,7 +43,8 @@ const launcher = new ApolloEngineLauncher({
     {
       /* parse evn-var issue */
       /* host: process.env.APOLLO_FRONT_HOST, */
-      port: parseInt(process.env.APOLLO_FRONT_PORT.slice(1, -1)),
+      /* port: parseInt(process.env.APOLLO_FRONT_PORT.slice(1, -1)), */
+      port: parseInt(process.env.APOLLO_FRONT_PORT),
       endpoints: ['/graphiql'],
       overrideGraphqlResponseHeaders: {
         'Access-Control-Allow-Origin': '*',
