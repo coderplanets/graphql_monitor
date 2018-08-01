@@ -9,11 +9,12 @@ const launcher = new ApolloEngineLauncher({
     {
       http: {
         /* url: 'http://localhost:4001/graphiql',*/
-        url: process.env.APOLLO_ORIGIN,
+        /* url: process.env.APOLLO_ORIGIN, */
+        url: 'http://devapiraw.coderplanets.com/graphiql',
         overrideRequestHeaders: {
-          host: 'http://devapiraw.coderplanets.com/graphiql',
+          /* host: 'http://devapiraw.coderplanets.com/graphiql', */
           /* origin: '*', */
-          'Access-Control-Allow-Origin': '*',
+          /* 'Access-Control-Allow-Origin': '*', */
           /* Host: 'devapi.coderplanets.com', */
           /* Host: 'coderplanets.com', */
           /* Host: 'coderplanets.com',*/
