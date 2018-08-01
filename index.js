@@ -21,7 +21,7 @@ const launcher = new ApolloEngineLauncher({
           /* Host: 'coderplanets.com',*/
           /* 'content-type': 'application/json',*/
           /* Origin: 'http://localhost:3000',*/
-          /* special: 'Special header value',*/
+          special: 'Special header value',
           /* authorization: 'Bearer autk',*/
         },
       },
