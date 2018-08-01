@@ -44,7 +44,7 @@ const launcher = new ApolloEngineLauncher({
     {
       /* parse evn-var issue */
       /* host: process.env.APOLLO_FRONT_HOST, */
-      host: 'http://devapi.coderplanets.com/graphiql',
+      host: 'http://devapi.coderplanets.com',
       /* port: parseInt(process.env.APOLLO_FRONT_PORT.slice(1, -1)), */
       /* port: parseInt(process.env.APOLLO_FRONT_PORT), */
       port: 7000, //parseInt(process.env.APOLLO_FRONT_PORT),
