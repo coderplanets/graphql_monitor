@@ -14,7 +14,7 @@ const launcher = new ApolloEngineLauncher({
         overrideRequestHeaders: {
           /* host: 'http://devapiraw.coderplanets.com/graphiql', */
           /* origin: '*', */
-          /* 'Access-Control-Allow-Origin': '*', */
+          'Access-Control-Allow-Origin': '*',
           /* Host: 'devapi.coderplanets.com', */
           /* Host: 'coderplanets.com', */
           /* Host: 'coderplanets.com',*/
