@@ -49,11 +49,12 @@ const launcher = new ApolloEngineLauncher({
       /* host: 'http://devapi.coderplanets.com', */
       /* port: parseInt(process.env.APOLLO_FRONT_PORT.slice(1, -1)), */
       /* port: parseInt(process.env.APOLLO_FRONT_PORT), */
-      host: 'devapiraw.coderplanets.com',
+      /* host: 'devapiraw.coderplanets.com', */
       port: 7000, //parseInt(process.env.APOLLO_FRONT_PORT),
       endpoints: ['/graphiql'],
       overrideGraphqlResponseHeaders: {
         'Access-Control-Allow-Origin': '*',
+        special: 'Special header value',
       },
     },
   ],
