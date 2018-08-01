@@ -8,7 +8,7 @@ const launcher = new ApolloEngineLauncher({
   origins: [
     {
       http: {
-        /* url: 'http://localhost:4001/graphiql',*/
+        /* url: 'http://localhost:4001/graphiql', */
         /* url: process.env.APOLLO_ORIGIN, */
         url: 'http://devapiraw.coderplanets.com/graphiql',
         overrideRequestHeaders: {
@@ -27,8 +27,8 @@ const launcher = new ApolloEngineLauncher({
     },
   ],
   logging: {
-    /* level: 'INFO', */
-    level: 'ERROR',
+    level: 'INFO',
+    /* level: 'ERROR', */
     /* level: 'DEBUG', */
     /* level: 'INFO', */
     /* level: 'WARN', */
