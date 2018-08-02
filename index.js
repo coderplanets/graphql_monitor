@@ -9,32 +9,31 @@ const launcher = new ApolloEngineLauncher({
     {
       http: {
         /* url: 'http://localhost:4001/graphiql', */
-        url: 'http://localhost:7001/graphiql',
+        /* url: 'http://localhost:7001/graphiql', */
         /* url: process.env.APOLLO_ORIGIN, */
-        /* url: 'http://devapiraw.coderplanets.com/graphiql', */
+        url: 'http://devapiraw.coderplanets.com/graphiql',
         overrideRequestHeaders: {
           /* host: 'http://devapiraw.coderplanets.com/graphiql', */
           /* origin: '*', */
-          'access-control-allow-origin': '*',
-          Host: 'dev.coderplanets.com',
+          /* 'access-control-allow-origin': '*', */
+          Host: 'devapiraw.coderplanets.com',
+          /* Host: 'devapi.coderplanets.com', */
           /* Host: 'coderplanets.com', */
           /* Host: 'coderplanets.com',*/
-          'content-type': 'application/json;charset=utf-8',
+          /* 'content-type': 'application/json;charset=utf-8', */
           /* Origin: 'http://localhost:3000',*/
-          special: 'Special header value',
-          hello: 'world',
-          Hello: 'world 2',
+          /* special: 'Special header value', */
           /* authorization: 'Bearer autk',*/
         },
       },
     },
   ],
   logging: {
-    level: 'INFO',
+    /* level: 'INFO', */
     /* level: 'ERROR', */
     /* level: 'DEBUG', */
     /* level: 'INFO', */
-    /* level: 'WARN', */
+    level: 'WARN',
     request: {
       destination: 'STDOUT',
     },
