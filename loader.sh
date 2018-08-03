@@ -2,8 +2,8 @@
 
 cd /root/graphql_monitor
 
-# TODO: use pm2
-node index &
+npm run launch
+# node index &
 
 while true
 do
