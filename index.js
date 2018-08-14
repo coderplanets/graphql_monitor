@@ -8,39 +8,49 @@ const launcher = new ApolloEngineLauncher({
   origins: [
     {
       http: {
-        /* url: 'http://localhost:4001/graphiql',*/
-        url: process.env.APOLLO_ORIGIN,
+        /* url: 'http://localhost:4001/graphiql', */
+        /* url: 'http://localhost:7001/graphiql', */
+        /* url: process.env.APOLLO_ORIGIN, */
+        url: 'http://devapiraw.coderplanets.com/graphiql',
         overrideRequestHeaders: {
-          /* Host: 'api.coderplanets.com',*/
-          /* Host: 'coderplanets.com',*/
-          /* Host: 'coderplanets.com',*/
-          /* 'content-type': 'application/json',*/
+          /* origin: '*', */
+          /* 'access-control-allow-origin': '*', */
+          Host: 'devapiraw.coderplanets.com',
+          /* 'content-type': 'application/json;charset=utf-8', */
           /* Origin: 'http://localhost:3000',*/
-          /* special: 'Special header value',*/
+          /* special: 'Special header value', */
           /* authorization: 'Bearer autk',*/
         },
       },
     },
   ],
   logging: {
-    /* level: 'INFO',*/
-    level: 'ERROR',
     /* level: 'INFO', */
-    /* level: 'WARN', */
-    /*
+    /* level: 'ERROR', */
+    /* level: 'DEBUG', */
+    /* level: 'INFO', */
+    level: 'WARN',
     request: {
       destination: 'STDOUT',
     },
     query: {
       destination: 'STDOUT',
     },
-    */
   },
   frontends: [
     {
       /* parse evn-var issue */
-      port: parseInt(process.env.APOLLO_FRONT_PORT.slice(1, -1)),
+      /* host: process.env.APOLLO_FRONT_HOST, */
+      /* host: 'http://devapi.coderplanets.com', */
+      /* port: parseInt(process.env.APOLLO_FRONT_PORT.slice(1, -1)), */
+      /* port: parseInt(process.env.APOLLO_FRONT_PORT), */
+      /* host: 'devapiraw.coderplanets.com', */
+      port: 7000, //parseInt(process.env.APOLLO_FRONT_PORT),
       endpoints: ['/graphiql'],
+      /* overrideGraphqlResponseHeaders: { */
+      /* 'Access-Control-Allow-Origin': '*', */
+      /* special: 'Special header value', */
+      /* }, */
     },
   ],
 })
