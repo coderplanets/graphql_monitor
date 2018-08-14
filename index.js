@@ -10,12 +10,13 @@ const launcher = new ApolloEngineLauncher({
       http: {
         /* url: 'http://localhost:4001/graphiql', */
         /* url: 'http://localhost:7001/graphiql', */
-        /* url: process.env.APOLLO_ORIGIN, */
-        url: 'http://apiraw.coderplanets.com/graphiql',
+        /* url: 'http://apiraw.coderplanets.com/graphiql', */
+        url: process.env.APOLLO_ORIGIN,
         overrideRequestHeaders: {
           /* origin: '*', */
           /* 'access-control-allow-origin': '*', */
-          Host: 'apiraw.coderplanets.com',
+          /* Host: 'apiraw.coderplanets.com', */
+          Host: process.env.APOLLO_ORIGIN.split('//')[1],
           /* 'content-type': 'application/json;charset=utf-8', */
           /* Origin: 'http://localhost:3000',*/
           /* special: 'Special header value', */
@@ -25,11 +26,11 @@ const launcher = new ApolloEngineLauncher({
     },
   ],
   logging: {
-    level: 'INFO',
+    /* level: 'INFO', */
     /* level: 'ERROR', */
     /* level: 'DEBUG', */
     /* level: 'INFO', */
-    /* level: 'WARN', */
+    level: 'WARN',
     request: {
       destination: 'STDOUT',
     },
