@@ -15,7 +15,7 @@ const launcher = new ApolloEngineLauncher({
         overrideRequestHeaders: {
           /* origin: '*', */
           /* 'access-control-allow-origin': '*', */
-          Host: 'devapiraw.coderplanets.com',
+          Host: 'apiraw.coderplanets.com',
           /* 'content-type': 'application/json;charset=utf-8', */
           /* Origin: 'http://localhost:3000',*/
           /* special: 'Special header value', */
