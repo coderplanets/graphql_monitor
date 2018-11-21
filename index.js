@@ -39,13 +39,6 @@ const launcher = new ApolloEngineLauncher({
       destination: 'STDOUT',
     },
   },
-  stores: [
-    {
-      inMemory: {
-        cacheSize: 104857600 * 2, // 200 MB; defaults to 50MB.
-      },
-    },
-  ],
   frontends: [
     {
       /* parse evn-var issue */
