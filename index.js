@@ -25,21 +25,18 @@ const launcher = new ApolloEngineLauncher({
       },
     },
   ],
+  /*
   logging: {
-    /* level: 'INFO', */
-    /* level: 'ERROR', */
-    /* level: 'DEBUG', */
-    /* level: 'INFO', */
-    level: 'WARN',
-    /*
+    level: 'WARN', // 'ERROR', 'DEBUG', 'INFO'
     request: {
       destination: 'STDOUT',
     },
     query: {
       destination: 'STDOUT',
     },
-    */
   },
+  */
+
   // Resize the default in-memory cache.
   stores: [
     {
