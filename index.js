@@ -49,14 +49,10 @@ const launcher = new ApolloEngineLauncher({
       /* host: 'devapiraw.coderplanets.com', */
       port: parseInt(process.env.APOLLO_FRONT_PORT),
       endpoints: ['/graphiql'],
-      extensions: {
-        // Extensions which will never be returned to clients.
-        // Defaults to ['tracing'].
-        blacklist: ['tracing', 'cacheControl'],
-        // Extensions to only return to clients if the client requests
-        // them.  Defaults to `['tracing', 'cacheControl']`.
-        strip: ['tracing'],
-      },
+      /* overrideGraphqlResponseHeaders: { */
+      /* 'Access-Control-Allow-Origin': '*', */
+      /* special: 'Special header value', */
+      /* }, */
     },
   ],
 })
