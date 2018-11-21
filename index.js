@@ -5,6 +5,7 @@ const { ApolloEngineLauncher } = require('apollo-engine')
 // Define the Engine configuration.
 const launcher = new ApolloEngineLauncher({
   apiKey: process.env.APOLLO_KEY,
+  cacheControl: true,
   origins: [
     {
       http: {
