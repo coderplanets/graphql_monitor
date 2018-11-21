@@ -39,6 +39,13 @@ const launcher = new ApolloEngineLauncher({
       destination: 'STDOUT',
     },
   },
+  stores: [
+    {
+      inMemory: {
+        cacheSize: 104857600 * 2, // 200 MB; defaults to 50MB.
+      },
+    },
+  ],
   frontends: [
     {
       /* parse evn-var issue */
@@ -49,10 +56,14 @@ const launcher = new ApolloEngineLauncher({
       /* host: 'devapiraw.coderplanets.com', */
       port: parseInt(process.env.APOLLO_FRONT_PORT),
       endpoints: ['/graphiql'],
-      /* overrideGraphqlResponseHeaders: { */
-      /* 'Access-Control-Allow-Origin': '*', */
-      /* special: 'Special header value', */
-      /* }, */
+      extensions: {
+        // Extensions which will never be returned to clients.
+        // Defaults to ['tracing'].
+        blacklist: ['tracing', 'cacheControl'],
+        // Extensions to only return to clients if the client requests
+        // them.  Defaults to `['tracing', 'cacheControl']`.
+        strip: ['tracing'],
+      },
     },
   ],
 })
