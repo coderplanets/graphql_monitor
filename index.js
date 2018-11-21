@@ -30,7 +30,7 @@ const launcher = new ApolloEngineLauncher({
     /* level: 'ERROR', */
     /* level: 'DEBUG', */
     /* level: 'INFO', */
-    level: 'ERROR',
+    level: 'WARN',
     /*
     request: {
       destination: 'STDOUT',
