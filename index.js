@@ -48,9 +48,7 @@ const launcher = new ApolloEngineLauncher({
       /* }, */
     },
   ],
-  queryCache: {
-    privateFullQueryStore: 'privateResponseMemcache',
-  },
+  queryCache: {},
 })
 
 // Start the Proxy; crash on errors.
