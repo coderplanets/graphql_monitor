@@ -1,9 +1,10 @@
 require('dotenv').config()
 
-const { ApolloEngineLauncher } = require('apollo-engine')
+// const { ApolloEngineLauncher } = require('apollo-engine')
+const { ApolloEngine } = require('apollo-engine')
 
 // Define the Engine configuration.
-const launcher = new ApolloEngineLauncher({
+const launcher = new ApolloEngine({
   apiKey: process.env.APOLLO_KEY,
   origins: [
     {
