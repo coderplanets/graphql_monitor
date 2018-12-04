@@ -1,10 +1,9 @@
 require('dotenv').config()
 
-// const { ApolloEngineLauncher } = require('apollo-engine')
-const { ApolloEngine } = require('apollo-engine')
+const { ApolloEngineLauncher } = require('apollo-engine')
 
 // Define the Engine configuration.
-const launcher = new ApolloEngine({
+const launcher = new ApolloEngineLauncher({
   apiKey: process.env.APOLLO_KEY,
   origins: [
     {
@@ -49,7 +48,17 @@ const launcher = new ApolloEngine({
       /* }, */
     },
   ],
-  queryCache: {},
+  stores: [
+    {
+      name: 'inMemEmbeddedCache',
+      inMemory: {
+        cacheSize: 104857600, // 100 MB; defaults to 50MB.
+      },
+    },
+  ],
+  queryCache: {
+    publicFullQueryStore: 'inMemEmbeddedCache',
+  },
 })
 
 // Start the Proxy; crash on errors.
